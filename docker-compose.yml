@@ -1,0 +1,12 @@
+version: '3.1'
+
+services:
+  client:
+    build: './clientv2'
+    volumes:
+      - './clientv2:/home/node/app'
+    working_dir: '/home/node/app'
+    command: 'yarn serve'
+    ports:
+      - 127.0.0.1:8080:8080
+      - 127.0.0.1:8000:8000
