@@ -34,7 +34,8 @@
                     .then(function (data) {
                         if (data.http_status === 200 && data.jwt) {
                             LocalStorageService.setEntry("access_token", data.jwt);
-                            router.push('/');
+                            //router.push('/');
+                            router.push('/')
                         }
                     })
                     .catch(err => alert(err));
