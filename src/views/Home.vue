@@ -1,7 +1,7 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="home mt-4">
+    <HelloWorld msg="Welcome to Your Vote application !" class="text-center"/>
+    <img class="rounded mx-auto d-block" alt="Vue logo" src="../assets/vote.jpg">
   </div>
 </template>
 
@@ -16,3 +16,7 @@ export default {
   }
 }
 </script>
+
+
+
+

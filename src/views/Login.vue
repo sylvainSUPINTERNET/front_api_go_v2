@@ -1,7 +1,7 @@
 <template>
     <div class="login">
 
-        <Form :submit="onSubmit" :initialValues="[
+        <Form class="text-center mt-5" :submit="onSubmit" :initialValues="[
     {name: 'email', type:'email', value: [''], idLabel: 'email', textLabel: 'Email :'},
     {name: 'password', type:'password', value:[''], idLabel:'password' ,textLabel: 'Password :'},
     ]"/>

@@ -1,0 +1,3 @@
+// logout / login -> refresh bizar parfois, data bind pas fait
+// menu dégueulasse
+/// push tous sur git voila fvini

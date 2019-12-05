@@ -19,11 +19,11 @@ export const isAuthenticatedMiddleware = (ROLES_ALLOW, to, from, next) => {
                 return next("/login");
             } else {
 
-                if(from.path === "/login") {
-                    localStorage.setItem("token_data", JSON.stringify(decoded));
-                }
+                //if(from.path === "/login") {
+                    //localStorage.setItem("token_data", JSON.stringify(decoded)["uuid"]);
+                //}
 
-                if(checkRoles(localStorage.getItem("token_data"), ROLES_ALLOW)){
+                if(checkRoles(decoded["accessLevel"], ROLES_ALLOW)){
                     // role is OK
                     return next();
                 } else {
@@ -47,7 +47,7 @@ export const isAuthenticatedMiddleware = (ROLES_ALLOW, to, from, next) => {
  */
 export const checkRoles = (userDataFromJwt, roles_to_check) => {
     if(userDataFromJwt){
-        return roles_to_check.includes(JSON.parse(userDataFromJwt).accessLevel);
+        return roles_to_check.includes(userDataFromJwt);
     } else {
         return false;
     }
